@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page - Header</title>
+  <!-- Unique, futuristic font for the logo -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Secondary main site font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="mailto:dante@abcfleworks.com" class="logo">contact dante @ awf</a>
+  </header>
+
+  <section class="project-management">
+  <div class="container">
+    <div class="management-layout">
+      <!-- Left Side: Description -->
+      <div class="management-text">
+        <h2>Project Management Experience</h2>
+        <p>
+          Feeling overwhelmed by managing projects? Need someone who thrives on organization, research, and workflow optimization? You've found the right person.
+        </p>
+        <p>
+          With experience across multiple project management platforms—specializing in <strong>Notion</strong> for single-person operations and <strong>Slack</strong> for team collaboration—I streamline workflows so you can focus on what you do best. <strong>Zapier integrations</strong> enhance automation, connecting tools effortlessly, while <strong>VS Code, Python, and OpenAI's API</strong> power AI-driven assistants to eliminate repetitive tasks.
+        </p>
+      </div>
+
+      <!-- Right Side: 4 Square Tools -->
+      <div class="management-tools">
+        <div class="tool">
+          <h3>Notion</h3>
+          <p>Organize projects, track progress, and maintain workflow clarity with custom dashboards.</p>
+        </div>
+        <div class="tool">
+          <h3>Slack</h3>
+          <p>Seamless team communication with structured updates and integrations.</p>
+        </div>
+        <div class="tool">
+          <h3>Zapier</h3>
+          <p>Automate workflows by linking platforms, reducing manual effort.</p>
+        </div>
+        <div class="tool">
+          <h3>AI & Automation</h3>
+          <p>AI-powered assistants streamline tasks, freeing up time for creativity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- A Smarter Way to Work Section -->
+    <div class="smarter-way">
+      <h3>A Smarter Way to Work</h3>
+      <p>
+        The world is adjusting to AI-enhanced workflows, and while some hesitate, the reality is clear—<strong>AI doesn’t replace creativity; it enhances it.</strong> By automating tedious tasks and structuring workflows intelligently, you gain more time to focus on what truly matters: producing your best work.
+      </p>
+      <p>
+        Mistakes are part of being human, but <strong>streamlined processes, automation, and well-crafted systems</strong> ensure higher-quality output without sacrificing your unique vision. Whether you're an independent creator or managing a growing team, I bring clarity, efficiency, and AI-powered tools to optimize your workflow.
+      </p>
+    </div>
+</section>
+
+<!-- Embedded Workflow Form (Using FormSubmit) -->
+<section class="workflow-form">
+  <div class="container">
+    <h2>Let’s Optimize Your Workflow</h2>
+    <p>Fill out the details below to start streamlining your workflow with tailored solutions.</p>
+
+    <form id="workflow-form" action="https://formsubmit.co/el/ducomo" method="POST">
+
+      <!-- Prevent spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirect to thank-you page -->
+      <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+      <!-- Send copy to additional emails -->
+      <input type="hidden" name="_cc" value="another@email.com,yetanother@email.com">
+      <!-- Autoresponse to sender -->
+      <input type="hidden" name="_autoresponse" value="Thank you for reaching out! I'll get back to you soon.">
+      <!-- Webhook for backend processing -->
+      <input type="hidden" name="_webhook" value="https://yourdomain.co/your-webhook">
+
+      <div class="form-content">
+
+        <!-- Workflow Needs & Platforms -->
+        <div class="form-section">
+          <label for="workflow-needs">What are you in need of when it comes to workflow?</label>
+          <select id="workflow-needs" name="Workflow Needs" required>
+            <option value="Emails & Clients">Emails & Clients</option>
+            <option value="Organization & Databases">Organization & Databases</option>
+            <option value="Calendar Management">Calendar Management</option>
+            <option value="Project Management">Project Management</option>
+            <option value="All">All of the above</option>
+            <option value="Unsure">Still Unsure</option>
+          </select>
+
+          <label for="platforms">What platforms are you interested in adding to your workflow?</label>
+          <select id="platforms" name="Preferred Platforms" required>
+            <option value="Notion">Notion</option>
+            <option value="Slack">Slack</option>
+            <option value="AI Integration">AI Integration</option>
+            <option value="Zapier">Zapier</option>
+            <option value="All">All of the above</option>
+            <option value="Unsure">Still Unsure</option>
+          </select>
+        </div>
+
+        <!-- Payment & Involvement -->
+        <div class="form-section">
+          <label for="payment">Preferred payment method:</label>
+          <select id="payment" name="Payment Preference" required>
+            <option value="Salary-based">Salary-based</option>
+            <option value="One-time per project">One-time per project</option>
+            <option value="Hourly rate">Hourly rate</option>
+          </select>
+
+          <label for="involvement">How involved do you want me to be in your project?</label>
+          <select id="involvement" name="Involvement Level" required>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Project to project">Project to project</option>
+          </select>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="form-section">
+          <label for="email">Work Email:</label>
+          <input type="email" id="email" name="email" required placeholder="Email Address">
+
+          <label for="phone">Phone (Optional):</label>
+          <input type="tel" id="phone" name="Phone">
+
+          <label for="social">Social Media (Optional):</label>
+          <input type="text" id="social" name="Social Media">
+        </div>
+
+        <!-- Description & Submit -->
+        <div class="form-section">
+          <label for="description">Short description of what you may need help with:</label>
+          <textarea id="description" name="Project Description" required></textarea>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Branding Section -->
+<div class="container">
+  <section class="brand-course">
+    <h2>How to Start a Brand from Scratch</h2>
+    <p>
+      Unlock a free, comprehensive guide to branding success. Building a strong brand requires strategy, creativity, and insight—expert guidance is available every step of the way.
+    </p>
+    <div class="team">
+      <div class="team-member">
+        <h3>Business Consulting</h3>
+        <p>Deep dives into ideas and concepts help establish a solid brand foundation.</p>
+      </div>
+      <div class="team-member">
+        <h3>Brand Design</h3>
+        <p>Innovative logo concepts and design drafts tailored to unique branding needs.</p>
+      </div>
+      <div class="team-member">
+        <h3>Roadmap Development</h3>
+        <p>Custom roadmaps covering market research, positioning, and business growth strategies.</p>
+      </div>
+      <div class="team-member">
+        <h3>Business Strategy</h3>
+        <p>Comprehensive business plans designed to support long-term success.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="learning-web3">
+    <h2>Learn Web3</h2>
+    <p>
+      A completely free Web3 course offers valuable insights into blockchain, NFTs, and decentralized technologies. For those looking to launch a project, tailored guidance ensures a strategic and impactful approach.
+    </p>
+    <a href="mailto:dante@flexworks.com" class="cta">Get Started</a>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

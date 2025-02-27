@@ -1,0 +1,485 @@
+/* Overall page styling with a dark theme */
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Logo styling */
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+/* Centered container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Project Management Section */
+.project-management {
+  background-color: #111;
+  padding: 60px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Flexbox Layout for Text & Cards */
+.management-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Left Side: Description */
+.management-text {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.management-text h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.management-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Right Side: Four Square Cards */
+.management-tools {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 500px;
+  flex: 1;
+}
+
+/* Individual Tool Card */
+.tool {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 200px;
+}
+
+.tool h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tool p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Smarter Way to Work Section */
+.smarter-way {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.smarter-way h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.smarter-way p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Workflow Form Section */
+.workflow-form {
+  background-color: #111;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Title & Paragraph */
+.workflow-form h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.workflow-form p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Form Content */
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form Sections */
+.form-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+/* Input, Select & Textarea Styling */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Placeholder Color */
+input::placeholder, textarea::placeholder {
+  color: #bbb;
+}
+
+/* Dropdown Consistency */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 30px;
+}
+
+/* Adjust Select Dropdown Arrow */
+select::after {
+  content: '▼';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+/* Textarea Resize */
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background-color: #f39c12;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #d4880c;
+}
+
+/* RESPONSIVE DESIGN FIXES */
+
+/* Mobile & Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .management-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .management-text {
+    max-width: 100%;
+  }
+
+  .management-tools {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .team {
+    flex-direction: column;
+  }
+
+  .team-member {
+    width: 100%;
+  }
+
+  .form-content {
+    max-width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+  .project-management {
+    padding: 40px 10px;
+  }
+
+  .workflow-form {
+    padding: 30px 15px;
+  }
+
+  .form-content {
+    padding: 0 10px;
+  }
+
+  .management-text h2,
+  .learning-web3 h2,
+  .brand-course h2 {
+    font-size: 28px;
+  }
+
+  .management-text p,
+  .learning-web3 p,
+  .brand-course p {
+    font-size: 14px;
+  }
+
+  .team-member {
+    padding: 15px;
+  }
+}
+
+/* Super Small Screens */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .workflow-form h2 {
+    font-size: 28px;
+  }
+
+  .workflow-form p {
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Branding Section (Restored) */
+.brand-course {
+  padding: 60px 20px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.brand-course h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.brand-course p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.brand-course a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.brand-course a:hover {
+  text-decoration: underline;
+}
+
+/* Branding Team Section */
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.team-member {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 200px;
+}
+
+.team-member h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 14px;
+}
+
+/* Learning Web3 Section (Restored) */
+.learning-web3 {
+  padding: 60px 20px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.learning-web3 h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.learning-web3 p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.learning-web3 a.cta {
+  display: inline-block;
+  background-color: #f39c12;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.learning-web3 a.cta:hover {
+  background-color: #d4880c;
+}
+
+/* RESPONSIVE DESIGN FIXES */
+
+/* Mobile & Tablet */
+@media (max-width: 1024px) {
+  .team {
+    flex-direction: column;
+  }
+
+  .team-member {
+    width: 100%;
+  }
+
+  .brand-course {
+    padding: 40px 15px;
+  }
+
+  .learning-web3 {
+    padding: 40px 15px;
+  }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+  .brand-course {
+    padding: 40px 15px;
+  }
+
+  .learning-web3 {
+    padding: 40px 15px;
+  }
+
+  .team-member {
+    padding: 15px;
+  }
+}
+
+/* Super Small Screens */
+@media (max-width: 480px) {
+  .brand-course h2,
+  .learning-web3 h2 {
+    font-size: 28px;
+  }
+
+  .brand-course p,
+  .learning-web3 p {
+    font-size: 14px;
+  }
+
+  .team-member {
+    padding: 15px;
+  }
+}
